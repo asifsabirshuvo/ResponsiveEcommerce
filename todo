@@ -1,6 +1,3 @@
-
-
-
 *user: dashboard
        _ order history
          _ _order on click view
@@ -16,6 +13,13 @@
 	_ email: html order email
 	_ email: html issue created email
 
+
+
+
+BUG:
+
+# login form goes up on scroll
+# fixed navbar when hamburger expanded
 
 
 
