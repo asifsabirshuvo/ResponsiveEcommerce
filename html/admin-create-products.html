@@ -1,0 +1,97 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Create Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- fa fa icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- added latest .. might be missing in other files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- crimson font download -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+    <!-- jquery for loader -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../css/header-admin.css">
+
+    <script>
+  //paste this code under head tag or in a seperate js file.
+  // Wait for window load
+  $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+  });
+</script>
+
+
+</head>
+<body>
+  <!-- Pre page loader -->
+  <div class="se-pre-con"></div>
+  <!-- Ends -->
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" >
+      <img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
+
+      <a href="login.html" class="cool-link" style="float:right;">Logout&nbsp;
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      </a>   
+
+  </div>
+
+<div class="main">
+<div class="sidebar">
+      <a href="admin-all-products.html" class="cool-link"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
+      <a href="admin-create-products.html" class="cool-link cool-link-active"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
+      <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
+      <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
+      <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
+
+      <a href="admin-order-history.html" class="cool-link"><i class="fas fa-history"></i>&nbsp;&nbsp;Order history</a>
+      <a href="admin-ticket-issues.html" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Ticket Issues</a>
+      <a href="admin-customer-accounts.html" class="cool-link"><i class="fa fa-users"></i>&nbsp;&nbsp;Customer accounts</a>
+      <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
+</div>
+
+<div class="content">
+  <h2>Responsive Sidebar Example</h2>
+  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+  <h3>Resize the browser window to see the effect.</h3>
+</div>
+
+
+<!-- exiting main -->
+</div>
+
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
+

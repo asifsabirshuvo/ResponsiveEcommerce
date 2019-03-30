@@ -1,0 +1,29 @@
+.discount-box{
+	display: inline-block;
+	border: 3px dotted #a8a8a8;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	width: 160px;
+	text-align:center;
+	background-color: #f7f7f7;
+}
+
+.discount-box-title{
+	text-align: center;
+	padding: 15px;
+	background-color: white;
+	font-size: 23px;
+}
+.discount-box-body{
+	color: black;
+	font-size: 15px;
+	text-align: center;
+}
+
+.discount-box-button{
+	background-color: red;
+	color: white;
+	border:3px solid red;
+	border-radius: 3px;
+}

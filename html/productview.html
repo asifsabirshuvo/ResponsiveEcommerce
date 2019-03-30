@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Product view</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- fa fa icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- crimson font download -->
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+<!-- jquery for loader -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/allproducts.css">  
+<script>
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
+</head>
+<body>
+	<!-- Pre page loader -->
+	<div class="se-pre-con"></div>
+	<!-- Ends -->
+
+	<div class="topnav" id="myTopnav">
+		<a href="index.html" >
+			<img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
+
+			<a href="allproducts.html" class="cool-link">All products</a>
+
+	   
+       <a href="cartview.html" class="cool-link" id="cart-group" 
+       style="float:right;">
+       <i class="fa fa-shopping-cart" id="cart-logo"></i>&nbsp; 
+       <span class="badge badge-overlap" id="cart-badge">1</span></a>
+       <a style="pointer-events: none; cursor: default;float: right;margin-top: 16px; border-right: 1px solid black;" href=""></a>
+			<a href="login.html" class="cool-link" style="float:right;">Login <i class="fas fa-sign-in-alt"></i></a>   
+
+
+
+
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars" id="bar-group" style="margin-top: 8px"> 
+					<span class="badge badge-overlap" id="cart-badge">1</span>
+				</i> 
+			</a>
+
+		</a>
+		<form id="demo-2"  style="float: right;margin-top: 6px;" class="search-form">
+			<input type="search" placeholder=" Search">
+		</form>
+
+	</div>
+
+	<div class="main">
+
+		<!-- product view -->
+
+		<!-- left view init -->
+		<div class="product-view-left">
+			<img id="myimage" src="../img/macbook.jpeg" width="65%" height="65%" 
+			style="border: 4px solid #f7f7f7;text-align: center;">
+		</div>
+		<!-- left view exit -->
+
+
+		<!-- right view init -->
+		<div class="product-view-right">
+			<h3><b>Hawai Shirt for man, Green and printed..100% cotton</b></h3>
+			<span id="macPrice" style="font-size: 20px;">980$</span>
+
+			<p>  <br><small>product ID: </small>
+				<small id="product-id">Uiaf97jdYjk</small>
+
+
+				<p>Sizes available: </span><span>M,L,XL</p>
+				<p>Lorem Uipsum LoremLorem Uipsum LoremLorem Uipsum Lorem
+					Lorem Uipsum LoremLorem Uipsum LoremLorem Uipsum LoremLorem  LoremLorem Uipsum LoremLorem Uipsum LoremLorem Uipsum Lore</p>
+
+					<br>
+
+
+
+					<select name="size" style="; padding: 7px 5px;" id="size-select" required>
+						<option value="">sizes</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+					</select>
+
+
+
+					<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+					<div style="display: inline-block;">
+
+					<button type="button" id="btn-minus" value="minus" style="text-align: center;padding: 5px 13px 5px 5px;margin-right: -1em;" onclick="updateQty(this.value)">
+							<i class="fa fa-minus" aria-hidden="true"></i>
+						</button>
+
+						<input class="input-group-field" id="input-qty" style="text-align: center ;margin: 0; padding: 5px 10px 5px 5px; width: 44px;" type="number" name="quantity" value="0">
+
+
+						<button type="button" id="btn-plus" value="plus" style="text-align: center;padding: 5px 5px;margin-left: -1em;" onclick="updateQty(this.value)">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</button>
+					</div>
+
+					<br><br>
+					<button type="button" style="margin-top: 5px;padding: 5px" id="fac"  value="fac" onclick="buynow(this)">
+						Add to cart	<i class="fas fa-cart-plus"> </i>
+					</button>  
+
+
+				</div>
+				<!-- exit right div -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- exiting main -->
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			<script>
+			
+				function myFunction() {
+					var x = document.getElementById("myTopnav");
+					if (x.className === "topnav") {
+						x.className += " responsive";
+					} else {
+						x.className = "topnav";
+					}
+				}
+
+
+
+
+				function animatefunc() {
+
+					var x =   document.getElementById('cart-group');
+	   //hamburger menu icon group
+	   var x1 = document.getElementById("bar-group");
+	    //shaking the cart logo
+	    x.className = "cool-link vibrate";
+	    //hamburger menu to shake on button click
+	    x1.className += " vibrate";
+	    setTimeout(function(){ 
+	      //reseting  cart logo shake
+	      x.className = "cool-link";
+	       //reseting hamburger menu shake
+	       x1.className = "fa fa-bars";
+	   }, 500);
+	}
+
+
+	function buynow(item){
+	    	//animate func
+	    	animatefunc();
+
+	    	//changing button text
+	    	var buttonId = item.id;
+	    	document.getElementById(buttonId).innerHTML = 'added to cart <i class="fas fa-check fa-fa-red">'
+	    	document.getElementById(buttonId).disabled = true;
+	    	//updating cookies
+	    }
+
+
+	    function updateQty(val){
+			var qty = document.getElementById("input-qty");
+
+			if(val=='plus')
+				qty.value = parseInt(qty.value)+1;
+			else
+				if(parseInt(qty.value)!=0)
+				qty.value = parseInt(qty.value)-1;
+			
+
+		}
+
+	</script>
+
+</body>
+</html>
+
+

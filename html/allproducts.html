@@ -1,0 +1,245 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>All Products</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- fa fa icons -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<!-- crimson font download -->
+		<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+		<!-- jquery for loader -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../css/header.css">
+		<link rel="stylesheet" type="text/css" href="../css/allproducts.css">  
+<script>
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
+
+
+	</head>
+	<body>
+	<!-- Pre page loader -->
+	<div class="se-pre-con"></div>
+	<!-- Ends -->
+
+		<div class="topnav" id="myTopnav">
+			<a href="index.html" >
+				<img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
+
+				<a href="allproducts.html" class="cool-link cool-link-active">All products</a>
+
+				
+       <a href="cartview.html" class="cool-link" id="cart-group" 
+       style="float:right;">
+       <i class="fa fa-shopping-cart" id="cart-logo"></i>&nbsp; 
+       <span class="badge badge-overlap" id="cart-badge">1</span></a>
+       <a style="pointer-events: none; cursor: default;float: right;margin-top: 16px; border-right: 1px solid black;" href=""></a>
+			<a href="login.html" class="cool-link" style="float:right;">Login 
+			<i class="fas fa-sign-in-alt"></i></a>   
+
+
+
+
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars" id="bar-group" style="margin-top: 8px"> 
+						<span class="badge badge-overlap" id="cart-badge">1</span>
+					</i> 
+				</a>
+
+			</a>
+			<form id="demo-2"  style="float: right;margin-top: 6px;" class="search-form">
+				<input type="search" placeholder=" Search">
+			</form>
+
+		</div>
+
+		<div class="main">
+
+			<!-- all products card view div // centering elements of the cards-->
+
+			<div  style="text-align: center;" > 
+
+
+				<!-- product elements -->
+
+
+				<div class="product-box" > 	 
+					<!-- making it details page clickable -->
+					<div onclick="location.href='productview.html';">
+						<img src="../img/macbook.jpeg"  alt="Image" style="height: 200px;width: 200px;"><br>
+						<p id="macPrice" class="product-title">
+							1Macbook Pro 17inch silver 16gb 
+						</p>
+					</div>
+					
+					<!-- keeping add to cart out of this details click -->
+					<span id="macPrice" style="font-size: 20px;">980$</span>
+					&nbsp;&nbsp;	                 
+					<button type="button" style="margin-top: 5px;" id="mac"  value="mac" onclick="buynow(this)">
+						Add to cart<i class="fas fa-cart-plus"></i>
+					</button> 						 
+
+				</div>
+
+				<div class="product-box" > 	 
+					<!-- making it details page clickable -->
+					<div onclick="location.href='productview.html';">
+						<img src="../img/macbook.jpeg"  alt="Image" style="height: 200px;width: 200px;"><br>
+						<p id="macPrice" class="product-title">
+							1Macbook Pro 17inch silver 16gb 
+						</p>
+					</div>
+					
+					<!-- keeping add to cart out of this details click -->
+					<span id="macPrice" style="font-size: 20px;">980$</span>
+					&nbsp;&nbsp;	                 
+					<button type="button" style="margin-top: 5px;" id="mfac"  value="mac" onclick="buynow(this)">
+						Add to cart<i class="fas fa-cart-plus"> </i>
+					</button> 
+
+				</div>
+
+				<div class="product-box" > 	 
+					<!-- making it details page clickable -->
+					<div onclick="location.href='productview.html';">
+						<img src="../img/macbook.jpeg"  alt="Image" style="height: 200px;width: 200px;"><br>
+						<p id="macPrice" class="product-title">
+							1Macbook Pro 17inch silver 16gb 
+						</p>
+					</div>
+					
+					<!-- keeping add to cart out of this details click -->
+					<span id="macPrice" style="font-size: 20px;">980$</span>
+					&nbsp;&nbsp;	                 
+					<button type="button" style="margin-top: 5px;" id="m4fac"  value="mac" onclick="buynow(this)">
+						Add to cart<i class="fas fa-cart-plus"> </i>
+					</button> 
+
+				</div>
+
+				<div class="product-box" > 	 
+					<!-- making it details page clickable -->
+					<div onclick="location.href='productview.html';">
+						<img src="../img/macbook.jpeg"  alt="Image" style="height: 200px;width: 200px;"><br>
+						<p id="macPrice" class="product-title">
+							1Macbook Pro 17inch silver 16gb 
+						</p>
+					</div>
+					
+					<!-- keeping add to cart out of this details click -->
+					<span id="macPrice" style="font-size: 20px;">980$</span>
+					&nbsp;&nbsp;	                 
+					<button type="button" style="margin-top: 5px;" id="mfeac"  value="mac" onclick="buynow(this)">
+						Add to cart<i class="fas fa-cart-plus"> </i>
+					</button> 
+
+				</div>
+
+				<div class="product-box" > 	 
+					<!-- making it details page clickable -->
+					<div onclick="location.href='productview.html';">
+						<img src="../img/macbook.jpeg"  alt="Image" style="height: 200px;width: 200px;"><br>
+						<p id="macPrice" class="product-title">
+							1Macbook Pro 17inch silver 16gb 
+						</p>
+					</div>
+					<!-- keeping add to cart out of this details click -->
+					<span id="macPrice" style="font-size: 20px;">980$</span>
+					&nbsp;&nbsp;	                 
+					<button type="button" style="margin-top: 5px;" id="mfasc"  value="mac" onclick="buynow(this)">
+						Add to cart<i class="fas fa-cart-plus"> </i>
+					</button> 
+				</div>
+
+				<div class="product-box" > 	 
+					<!-- making it details page clickable -->
+					<div onclick="location.href='productview.html';">
+						<img src="../img/macbook.jpeg"  alt="Image" style="height: 200px;width: 200px;"><br>
+						<p id="macPrice" class="product-title">
+							1Macbook Pro 17inch silver 16gb 
+						</p>
+					</div>
+					<!-- keeping add to cart out of this details click -->
+					<span id="macPrice" style="font-size: 20px;">980$</span>
+					&nbsp;&nbsp;	                 
+					<button type="button" style="margin-top: 5px;" id="mfa7sc"  value="mac" onclick="buynow(this)">
+						Add to cart<i class="fas fa-cart-plus"> </i>
+					</button> 
+				</div>
+
+		
+
+		<!-- all products cardview div closes -->
+			</div>
+			<!-- exiting main -->
+		</div>
+
+
+
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+
+			}
+
+
+
+
+		function animatefunc(item) {
+
+
+
+		var x =   document.getElementById('cart-group');
+	   //hamburger menu icon group
+	   var x1 = document.getElementById("bar-group");
+	    //shaking the cart logo
+	    x.className = "cool-link vibrate";
+	    //hamburger menu to shake on button click
+	    x1.className += " vibrate";
+	    setTimeout(function(){ 
+	      //reseting  cart logo shake
+	      x.className = "cool-link";
+	       //reseting hamburger menu shake
+	       x1.className = "fa fa-bars";
+	  	 }, 500);
+
+
+
+	}
+
+
+	function buynow(item){
+	    	//animate func
+	    	animatefunc(item);
+
+	    	//changing button text
+	    	var buttonId = item.id;
+	    	document.getElementById(buttonId).innerHTML = 'added to cart <i class="fas fa-check fa-fa-red">'
+	    	document.getElementById(buttonId).disabled = true;
+	    	//updating cookies
+	    }
+
+
+
+	</script>
+
+</body>
+</html>
+

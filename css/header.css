@@ -1,0 +1,295 @@
+			body {
+				margin: 0;
+				font-family: Arial, Helvetica, sans-serif;
+				
+			}
+
+			*{
+				font-family: 'Work Sans', sans-serif;
+			}
+			.main{
+				/*to take the things down to fixed nav*/
+				padding-top: 65px; 
+			}
+
+			.cool-link {
+				display: inline-block;
+				color: #3F3F3F;
+				margin-top:5px;
+				text-decoration: none;
+			}
+
+			.cool-link::after {
+				content: '';
+				margin-top:5px;
+				display: block;
+				width: 0;
+				height: 3px;
+				background: red;
+				transition: width .3s;
+			}
+
+			.cool-link:hover::after {
+				width: 100%;
+				transition: width .3s;
+			}
+
+			.cool-link-active:after{
+				content: '';
+				margin-top:5px;
+				display: block;
+				width: 100%;
+				height: 3px;
+				background: red;
+				transition: opacity 2s;
+			}
+
+			.topnav {
+				overflow: hidden;
+				border-bottom: 3px solid #F7F7F7;
+				position: fixed;
+				background-color: white;
+				width: 100%;
+
+			}
+
+
+			.topnav a {
+				float: left;
+				display: block;
+				color: #3F3F3F;
+				text-align: center;
+				padding: 8px 10px;
+				text-decoration: none;
+				font-size: 16px;
+			}
+
+			.active {
+				background-color: red;
+				color: white;
+			}
+
+			.topnav .icon {
+				display: none;
+			}
+
+
+
+			.img-rotate {
+				border-radius: 50%;
+				-webkit-transition: -webkit-transform .8s ease-in-out;
+				transition: transform .8s ease-in-out;
+			}
+			.img-rotate:hover {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+
+
+
+
+			.badge{
+				background-color: red;
+			}
+
+
+
+			/*overlaping the badge*/
+			.badge-overlap{
+	/*   background:red;
+	*/   position:relative;
+	top: -7px;
+	left: -12px;
+}
+
+/*loading gif*/
+/* This only works with JavaScript,  if it's not present, don't show loader */
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(Preloader_6.gif) center no-repeat #fff;
+}
+
+/*vibrating class not used yet*/
+
+.vibrate{
+	animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+
+@keyframes shake {
+
+	0% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	20% {
+		transform: translate3d(10px, 0, 0);
+	}
+	40% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	60% {
+		transform: translate3d(10px, 0, 0);
+	}
+
+	80% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+/*=================================================*/
+
+
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
+	.topnav{
+		border-bottom: 0px solid white;
+
+		}
+	
+
+}
+
+@media screen and (max-width: 600px) {
+	.topnav.responsive {
+		/*make fixed here but index e kaj kortesena*/
+		position: relative;  
+	}
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	#demo-2{
+		float: right;
+	}
+	.carousel-indicators{
+		display: none;
+	}
+	
+}
+
+@media screen and (min-width: 601px){
+	.slide{
+		margin-right: 15%;
+		margin-left: 15%;
+	}
+}
+
+
+
+
+
+/**************** search bar animation*******************/
+
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+	margin-bottom: 5px;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: white url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	border:0px;
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+/*input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+*/
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #fff;
+	border: 0;
+
+}
+#demo-2 input[type=search]:focus {
+	width: 150px;
+	border: solid 1px #ccc;
+
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+} 
+
+
+
+/*text box blue shadow removal*/
+
+.form-control:focus {
+  border-color:red;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}

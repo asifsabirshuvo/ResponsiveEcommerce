@@ -1,0 +1,48 @@
+
+td{
+	border-left: none;
+	border-right: none;
+	text-align: center;
+border: none;}
+
+
+@media screen and (max-width: 800px) {
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, tr {
+		display: block;
+	}
+	td{
+		display: block;
+	}
+	tr{
+		border-bottom: 1px solid #dddddd;
+	}
+}
+
+
+
+@media screen and (min-width: 801px){
+td{
+	border-bottom: 1px solid #dddddd;
+}
+
+.product-title{
+  width:310px;
+}
+
+
+}
+
+
+
+@media screen and (min-width: 1000px){
+td{
+	border-bottom: 1px solid #dddddd;
+}
+
+.product-title{
+  width:430px;
+}
+
+
+}

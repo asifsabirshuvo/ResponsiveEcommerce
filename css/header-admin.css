@@ -1,0 +1,259 @@
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+ 
+
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+/*    position: relative;*/
+position: fixed;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;margin-top: 120px;}
+}
+
+
+/* local header import starts here*/
+
+
+
+			body {
+				margin: 0;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			*{
+				font-family: 'Work Sans', sans-serif;
+			}
+			.main{
+				/*to take the things down to fixed nav*/
+				padding-top: 50px; 
+			}
+
+			.cool-link {
+				display: inline-block;
+				color: #3F3F3F;
+				margin-top:5px;
+				text-decoration: none;
+			}
+
+
+			.cool-link::after {
+				content: '';
+				margin-top:5px;
+				display: block;
+				width: 0;
+				height: 3px;
+				background: red;
+				transition: width .3s;
+			}
+
+			.cool-link:hover::after {
+				width: 100%;
+				//transition: width .3s;
+			}
+			
+			.cool-link-active{
+				background-color: ;
+			}
+
+			.cool-link-active:after{
+				content: '';
+				margin-top:5px;
+				display: block;
+				width: 100%;
+				height: 3px;
+				background: red;
+				transition: opacity 2s;
+			}
+
+			.topnav {
+				overflow: hidden;
+				border-bottom: 3px solid #F7F7F7;
+				position: fixed;
+				background-color: white;
+				width: 100%;
+				top: 0;
+
+			}
+
+
+			.topnav a {
+				float: left;
+				display: block;
+				color: #3F3F3F;
+				text-align: center;
+				padding: 8px 10px;
+				text-decoration: none;
+				font-size: 16px;
+			}
+
+			.active {
+				background-color: red;
+				color: white;
+			}
+
+			.topnav .icon {
+				display: none;
+			}
+
+
+
+			.img-rotate {
+				border-radius: 50%;
+				-webkit-transition: -webkit-transform .8s ease-in-out;
+				transition: transform .8s ease-in-out;
+			}
+			.img-rotate:hover {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+
+
+
+
+			.badge{
+				background-color: red;
+			}
+
+
+
+			/*overlaping the badge*/
+			.badge-overlap{
+	/*   background:red;
+	*/   position:relative;
+	top: -7px;
+	left: -12px;
+}
+
+/*loading gif*/
+/* This only works with JavaScript,  if it's not present, don't show loader */
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(Preloader_6.gif) center no-repeat #fff;
+}
+
+/*=================================================*/
+
+
+
+
+
+
+/**************** search bar animation*******************/
+
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: white url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	border:0px;
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+/*input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+*/
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #fff;
+	border: 0;
+
+}
+#demo-2 input[type=search]:focus {
+	width: 150px;
+	border: solid 1px #ccc;
+
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+} 
+
+
+
+/*text box blue shadow removal*/
+
+.form-control:focus {
+  border-color:red;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
