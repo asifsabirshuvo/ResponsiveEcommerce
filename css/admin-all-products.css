@@ -1,14 +1,15 @@
-
 .btn-src{
 	background-color: #f1f1f1;
 	border:2px solid #f1f1f1;
 	padding:6px 15px;
 	border-radius: 5px;
 }
+
 .btn-src:hover{
   border-color:red;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }
+
 .btn-src:active{
 	background-color: red;
 	border:1px solid grey;
@@ -20,12 +21,11 @@ li:hover{
 	background-color: #f7f7f7;
 }
 
-
-
 /*order table*/
 table{
 	color: grey;
 }
+
 .list-group{
 	margin-left: 5%;
 	margin-right: 5%;
@@ -35,11 +35,15 @@ table{
 padding: 5px;
 }
 
-
 /*featured ribbom*/
 .ribbon{
-	padding: 2px 5px;
+	float: right;
+	padding: 0px 35px 0px 5px;
 	color: white;
-	background-color: #d9534f;
+	background-image: linear-gradient(to right, grey, white); /* Standard syntax (must be last) */
+	background-color: grey; /* browser not supporting gradients*/
 	position: absolute;
+	color: white;
+	font-size: 12px;
+	margin-top: 3px;
 }
