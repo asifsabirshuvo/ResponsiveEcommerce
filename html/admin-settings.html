@@ -20,6 +20,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     
     <link rel="stylesheet" type="text/css" href="../css/header-admin.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin-settings.css">
 
     <script>
   //paste this code under head tag or in a seperate js file.
@@ -37,7 +38,7 @@
   <div class="se-pre-con"></div>
   <!-- Ends -->
 
-  <div class="topnav" id="myTopnav">
+  <div class="topnav" style="z-index: 1000;" id="myTopnav">
     <a href="index.html" >
       <img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
 
@@ -50,8 +51,9 @@
 <div class="main">
 <div class="sidebar">
       <a href="admin-all-products.html" class="cool-link"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
+      
+        <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
       <a href="admin-create-products.html" class="cool-link"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
-      <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
       <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
       <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
 
@@ -62,13 +64,34 @@
 </div>
 
 <div class="content">
-  <h2>Responsive Sidebar Example</h2>
-  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-  <h3>Resize the browser window to see the effect.</h3>
+
+<h4>Upload your logo</h4>
+<form class="form-inline" action="/action_page.php">    
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-upload" aria-hidden="true"></i></span>
+      <input type="file" class="form-control" id="banner-file" placeholder="upload a image file" name="banner-img">
+    </div>
+    <button type="submit" class="btn-src">Upload</button>
+</form>
+
+<hr>
+
+<h4>Change password</h4>
+ <form class="form-inline" action="/action_page.php">
+    <div class="form-group">
+      <input type="password" class="form-control" id="pwd1" placeholder="Enter new password" name="pwd1">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="pwd2" placeholder="Re-enter new password" name="pwd2">
+    </div>
+    <button type="submit" class="btn-src">Change</button>
+  </form>
+
+<hr>
+
+
+<!-- content area closes -->
 </div>
-
-
 <!-- exiting main -->
 </div>
 

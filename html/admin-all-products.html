@@ -20,6 +20,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     
     <link rel="stylesheet" type="text/css" href="../css/header-admin.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin-all-products.css">
 
     <script>
   //paste this code under head tag or in a seperate js file.
@@ -37,12 +38,12 @@
   <div class="se-pre-con"></div>
   <!-- Ends -->
 
-  <div class="topnav" id="myTopnav">
+  <div class="topnav" style="z-index: 1000;" id="myTopnav">
     <a href="index.html" >
       <img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
 
       <a href="login.html" class="cool-link" style="float:right;">Logout&nbsp;
-        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
       </a>   
 
   </div>
@@ -50,8 +51,9 @@
 <div class="main">
 <div class="sidebar">
       <a href="admin-all-products.html" class="cool-link cool-link-active"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
+      
+        <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
       <a href="admin-create-products.html" class="cool-link"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
-      <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
       <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
       <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
 
@@ -61,14 +63,216 @@
       <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
 </div>
 
-<div class="content">
-  <h2>Responsive Sidebar Example</h2>
-  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-  <h3>Resize the browser window to see the effect.</h3>
+ <!-- content starts -->
+      <div class="content" >
+
+
+        <!-- Search form -->
+        <div style="text-align: center;border-radius: 30px;">
+          <form action="a.asp">
+            <input class="form-control" required="true" autofocus="true" style="text-align: center;width: 80%;display: inline-block;" type="text" placeholder="Search a product" name="searchtxt">
+            <input class="btn-src" type="submit" style="margin-left: -2px;"  value="Search">
+          </form>
+        </div>
+        <br>
+        <!-- search form closes -->
+
+        <!-- list of customer starts -->
+        <ul class="list-group">
+
+         <li class="list-group-item" style="height: 100px;width: 100%;color: grey;">
+          <div style="margin: 0 auto;">       
+            <!-- ribbon      -->
+             <div style="float: left;height: 100%;width: 13%;">
+               <img src="../img/sample.jpg" style="height: 90px;top:0;padding:2px;">
+             </div>
+             <div style="float: left;width: 87%;top: 0px;">
+               <span style="display: inline-block;float: right; font-size: 25px;">499$</span>
+              <span style="font-size: 17px;">Mens suit 100% leather with metal patch   
+              </span><br>
+              <span > ID: 60943698234</span>
+
+              <!-- Featured -->
+              <div class="ribbon">
+              <i class="fas fa-fire">Featured</i>
+              </div>
+
+              <div style="margin-top: 20px;">
+              <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" 
+              data-target="#deleteModal" style="float: right;margin-left: 10px;">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              Delete</button>
+
+              <button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#editModal"
+               style="float: right; margin-left: 10px;">
+              <i class="fa fa-edit" ></i>
+              Edit</button>
+              
+              <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#viewModal" style="float: right;">
+              <i class="fa fa-eye" aria-hidden="true"></i>
+              View</button>
+              </div>              
+              </div>
+          </div>
+         </li>
+
+
+
+        </ul>
+    <!-- list of customer ends -->
+
+
+
+
+ <!-- modal for the view pop up -->
+ <div class="modal" id="viewModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <!-- Modal body -->
+       <div class="modal-body" style="color: grey;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <br>
+           <div style="text-align: center;"> 
+           <img src="../img/macbook.jpeg" style="height: 200px;width: 200px padding:2px;">
+           </div>
+           <div style="border-left: 2px solid grey; padding-left: 10px;">
+           <span style="font-size:17px;font-weight: bold;">Mens suit 100% leather with metal metal patch </span><br>
+           <span > ID: 60943698234</span> <br>                
+           <span >Price: 499$</span> <br>
+           <span >Sizes: M, L, XL</span> 
+           </div>
+           <br>
+           <div style="border-left: 2px solid grey; padding-left: 10px;">
+           <b>Details:</b>    
+           <p> 
+           Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem 
+           Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem 
+           Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem 
+           Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem 
+           Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem 
+           Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem
+           </p> 
+           </div>                
+        <!-- modal body ends -->
+      </div>
+   </div>
+  </div>
 </div>
+<!-- modal has ended -->
 
 
+ <!-- The edit Modal -->
+ <div class="modal" id="editModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+       <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <div style="border-left: 2px solid red; padding-left: 10px;">
+              <h4>Edit Product</h4>
+              <p>product ID: 78940004875</p>              
+              </div>
+            </div>
+    <!-- Modal body -->
+       <div class="modal-body" style="color: grey;">
+       <form>
+            <div class="input-group">
+              <span class="input-group-addon" style="min-width: 105px;">Title</span>
+              <input id="title" type="text" class="form-control" name="title" placeholder="Product title" 
+              value="Mens suit 100% leather with metal patch" required="true">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" style="min-width: 105px;">Price</span>
+              <input id="price" type="number" class="form-control" name="price" placeholder="Product price"
+              value="449" required="true">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" style="min-width: 105px;">Description</span>
+              <textarea class="form-control" id="description" name="description" rows="5" placeholder="Product Description" required="true">Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum 
+              
+              </textarea>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" style="min-width: 105px;">Image</span>
+              <input type="file" class="form-control" id="banner-file" placeholder="upload a image file" name="banner-img">
+            </div>
+            <div class="input-group" style="text-align: left;font-size: 15px;border-right:1px solid #cccccc;border-bottom:1px solid #cccccc;border-radius: 5px;">
+              <span class="input-group-addon" style="min-width: 106px;border-right: 1px solid #cccccc;">Sizes</span>
+              <label class="checkbox-inline" style="margin-left: 20px;" >
+                <input type="checkbox" name="sizes[]" value="S" checked="true">S
+              </label>
+              <label class="checkbox-inline" style="margin-left: 20px;" >
+                <input type="checkbox" name="sizes[]" value="M">M
+              </label>
+              <label class="checkbox-inline" style="margin-left: 20px;">
+                <input type="checkbox" name="sizes[]" value="L" checked="true">L
+              </label>
+              <label class="checkbox-inline" style="margin-left: 20px;">
+                <input type="checkbox" name="sizes[]" value="XL">XL
+              </label> 
+              <label class="checkbox-inline" style="margin-left: 20px;">
+                <input type="checkbox" name="sizes[]" value="XXL">XXL
+              </label>   
+            </div>
+            <br>
+            <!--  -->
+
+            <div style="text-align: center;">
+             <button type="button" class="btn btn-src" data-dismiss="modal">
+             Cancel                    
+             <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+             </button>
+
+            <button class="btn btn-src" type="submit">
+             Save
+            <i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i>
+            </button>
+            </div>
+     
+          </form>
+
+        <!-- modal body ends -->
+      </div>
+   </div>
+  </div>
+</div>
+<!-- modal has ended -->
+
+
+
+ <!-- modal for the confirm pop up -->
+            <div class="modal" id="deleteModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h3 style="text-align: center;">Are you sure?</h3>
+                    <!-- modal header closes -->
+                  </div> 
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer" style="text-align: center;">   
+                    <button type="button" class="btn-src" data-dismiss="modal">
+                    Cancel                    
+                    <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                    </button>
+
+                    <button class="btn-src" type="submit" id="submit-original">
+                    Delete
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button> 
+
+                   
+                  </div>
+
+                </div>
+              </div>
+            </div>
+<!-- modal has ended -->
+
+
+<!-- exiting content -->
+</div>
 <!-- exiting main -->
 </div>
 

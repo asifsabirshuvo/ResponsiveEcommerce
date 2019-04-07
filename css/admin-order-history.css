@@ -1,0 +1,58 @@
+
+.btn-src{
+	background-color: #f1f1f1;
+	border:2px solid #f1f1f1;
+	padding:6px 15px;
+	border-radius: 5px;
+}
+.btn-src:hover{
+  border-color:red;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+.btn-src:active{
+	background-color: red;
+	border:1px solid grey;
+	color: white;
+	padding:6px 15px;
+}
+
+li:hover{
+	background-color: #f7f7f7;
+}
+
+
+
+/*order table*/
+table{
+	color: grey;
+}
+
+/*list order ID time float right*/
+.list-id-time{
+	color: grey;
+}
+.list-group-item{
+padding: 5px 40px;
+}
+
+
+/*modal pop up*/
+
+.modal-order-tag{
+	border-left: 2px solid red;
+	 padding-left: 10px;
+	 padding-bottom: 5px;
+	 background-color: #f1f1f1;
+	 margin-top: 25px;
+	color: grey;
+}
+.modal-user-tag{
+border-left: 2px solid red;
+ padding-left: 10px;
+background-color: #f7f7f7;
+margin-top: 5px; 
+color: grey;
+}
+.modal-order-body-tag{
+
+}

@@ -20,6 +20,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     
     <link rel="stylesheet" type="text/css" href="../css/header-admin.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin-order-history.css">
 
     <script>
   //paste this code under head tag or in a seperate js file.
@@ -36,8 +37,7 @@
   <!-- Pre page loader -->
   <div class="se-pre-con"></div>
   <!-- Ends -->
-
-  <div class="topnav" id="myTopnav">
+  <div class="topnav" style="z-index: 1000;" id="myTopnav">
     <a href="index.html" >
       <img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
 
@@ -45,33 +45,203 @@
         <i class="fa fa-sign-out" aria-hidden="true"></i>
       </a>   
 
+    </div>
+
+    <div class="main">
+      <div class="sidebar">
+        <a href="admin-all-products.html" class="cool-link"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
+        <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
+        <a href="admin-create-products.html" class="cool-link"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
+        <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
+        <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
+
+        <a href="admin-order-history.html" class="cool-link cool-link-active"><i class="fas fa-history"></i>&nbsp;&nbsp;Order history</a>
+        <a href="admin-ticket-issues.html" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Ticket Issues</a>
+        <a href="admin-customer-accounts.html" class="cool-link"><i class="fa fa-users"></i>&nbsp;&nbsp;Customer accounts</a>
+        <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
+      </div>
+
+      <!-- content starts -->
+      <div class="content">
+        <!-- Search form -->
+        <div style="text-align: center;border-radius: 30px;">
+          <form action="aa.php">
+            <input class="form-control" style="width: 80%;display: inline-block;text-align: center;" type="text" placeholder="Search an order ID" name="txt">
+            <input class="btn-src" style="margin-left: -2px;" type="submit" value="Search">
+          </form>
+        </div>
+        <br>
+
+        <!-- list group -->
+        <div style="margin: auto;width: 90%;">
+
+          <ul class="list-group" style="display: block; text-align: center;">
+            <li class="list-group-item"  data-toggle="modal" data-target="#myModal">
+              <div class="list-id-time">
+               <i class="glyphicon glyphicon-user"></i> John Doe Jackle
+               &nbsp;&nbsp;
+               <i class="fas fa-cart-arrow-down"></i> 75964280002
+               &nbsp;&nbsp;
+               <i class="fa fa-money" aria-hidden="true"></i> <span>55$</span>
+               &nbsp;&nbsp;
+               <i class="glyphicon glyphicon-time"></i>  7:11 PM April 2, 2019 
+               <span class="label label-warning" style="float: right;font-size: 14px;">&nbsp;&nbsp;Waiting&nbsp;</span>
+             </div>            
+           </li>
+
+           <li class="list-group-item"  data-toggle="modal" data-target="#myModal">
+            <div class="list-id-time">
+             <i class="glyphicon glyphicon-user"></i> John Doe Jackle
+             &nbsp;&nbsp;
+             <i class="fas fa-cart-arrow-down"></i> 75964280002
+             &nbsp;&nbsp;
+             <i class="fa fa-money" aria-hidden="true"></i> <span>55$</span>
+             &nbsp;&nbsp;
+             <i class="glyphicon glyphicon-time"></i>  7:11 PM April 2, 2019 
+             <span class="label label-success" style="float: right;font-size: 14px;">&nbsp;Shipped&nbsp;</span>
+           </div>            
+         </li>
+
+         <li class="list-group-item"  data-toggle="modal" data-target="#myModal">
+          <div class="list-id-time">
+           <i class="glyphicon glyphicon-user"></i> John Doe Jackle
+           &nbsp;&nbsp;
+           <i class="fas fa-cart-arrow-down"></i> 75964280002
+           &nbsp;&nbsp;
+           <i class="fa fa-money" aria-hidden="true"></i> <span>55$</span>
+           &nbsp;&nbsp;
+           <i class="glyphicon glyphicon-time"></i>  7:11 PM April 2, 2019 
+           <span class="label label-info" style="float: right;font-size: 14px;">Refunded</span>
+         </div>            
+       </li>
+
+       <li class="list-group-item"  data-toggle="modal" data-target="#myModal">
+        <div class="list-id-time">
+         <i class="glyphicon glyphicon-user"></i> John Doe Jackle
+         &nbsp;&nbsp;
+         <i class="fas fa-cart-arrow-down"></i> 75964280002
+         &nbsp;&nbsp;
+         <i class="fa fa-money" aria-hidden="true"></i> <span>55$</span>
+         &nbsp;&nbsp;
+         <i class="glyphicon glyphicon-time"></i>  7:11 PM April 2, 2019 
+         <span class="label label-danger" style="float: right;font-size: 14px;">Cancelled</span>
+       </div>            
+     </li>
+
+   </ul>
+   <!-- list grp div closes -->
+ </div>
+
+
+
+
+ <!-- modal for the pop up -->
+ <!-- The Modal -->
+ <div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <!-- order ID, date log -->
+        <div class="modal-order-tag">
+          <span style="font-size: 20px;">OrderID: 75964280002</span>          
+          <br>
+          <i class="glyphicon glyphicon-time" style="font-size: 12px;">       
+            <span>7:11 PM April 2, 2019 </span></i> 
+            <span class="label label-success" style="font-size: 10px;">&nbsp;Shipped&nbsp;</span>
+            <br>
+          </div>
+
+          <!--  user info-->
+          <div class="modal-user-tag">
+           <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  <br>
+           <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  
+           <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  <br>
+           <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span><br>
+         </div>
+         <!-- modal header closes -->
+       </div> 
+
+       <!-- Modal body -->
+       <div class="modal-body">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Luxury suit</td>
+              <td>200&nbsp;$</td>
+              <td>3</td>
+              <td>600&nbsp;$</td>
+            </tr>
+            <tr>
+              <td>Luxury suit</td>
+              <td>200&nbsp;$</td>
+              <td> 3</td>
+              <td>600&nbsp;$</td>
+            </tr>
+            <tr>
+              <td>Luxury suit</td>
+              <td>200&nbsp;$</td>
+              <td> 3</td>
+              <td>600&nbsp;$</td>
+            </tr>
+            <tr>
+              <td>Luxury suit</td>
+              <td>200&nbsp;$</td>
+              <td> 3</td>
+              <td>600&nbsp;$</td>
+            </tr>         
+          </tbody>
+        </table>
+        <span style="float: right;margin-right: 85px;background-color: #f1f1f1;padding: 3px;color: grey;">Net: <span>12000</span>&nbsp;$</span>              
+
+
+
+        <!-- modal body ends -->
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer" style="margin-top: 20px;">
+
+        <form class="form-inline" action="/ac.php" style="text-align: center;">
+          <div class="form-group">
+            <select class="form-control" id="status" name="status">
+              <option>Waiting</option>
+              <option>Shipped</option>
+              <option>Refunded</option>
+              <option>Cancelled</option>
+            </select>             
+
+
+          </div>
+          <button type="submit" class="btn-src" style="border-radius: 5px;">Update</button>
+        </form>
+
+
+      </div>
+
+    </div>
   </div>
-
-<div class="main">
-<div class="sidebar">
-      <a href="admin-all-products.html" class="cool-link"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
-      <a href="admin-create-products.html" class="cool-link"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
-      <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
-      <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
-      <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
-
-      <a href="admin-order-history.html" class="cool-link cool-link-active"><i class="fas fa-history"></i>&nbsp;&nbsp;Order history</a>
-      <a href="admin-ticket-issues.html" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Ticket Issues</a>
-      <a href="admin-customer-accounts.html" class="cool-link"><i class="fa fa-users"></i>&nbsp;&nbsp;Customer accounts</a>
-      <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
 </div>
-<div class="content">
-  <h2>Responsive Sidebar Example</h2>
-  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-  <h3>Resize the browser window to see the effect.</h3>
+<!-- modal has ended -->
+
+<!-- exiting content -->
 </div>
+
 
 
 <!-- exiting main -->
 </div>
-
-
 
 <script>
   function myFunction() {
@@ -89,7 +259,7 @@
 
 
 
-  </script>
+</script>
 
 </body>
 </html>

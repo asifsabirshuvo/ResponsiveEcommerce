@@ -21,6 +21,8 @@
     
     <link rel="stylesheet" type="text/css" href="../css/header-admin.css">
 
+    <link rel="stylesheet" type="text/css" href="../css/admin-customer-accounts.css">
+
     <script>
   //paste this code under head tag or in a seperate js file.
   // Wait for window load
@@ -37,7 +39,7 @@
   <div class="se-pre-con"></div>
   <!-- Ends -->
 
-  <div class="topnav" id="myTopnav">
+  <div class="topnav" style="z-index: 1000;" id="myTopnav">
     <a href="index.html" >
       <img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
 
@@ -50,8 +52,9 @@
     <div class="main">
       <div class="sidebar">
         <a href="admin-all-products.html" class="cool-link"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
-        <a href="admin-create-products.html" class="cool-link"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
+        
         <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
+        <a href="admin-create-products.html" class="cool-link"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
         <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
         <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
 
@@ -60,43 +63,125 @@
         <a href="admin-customer-accounts.html" class="cool-link cool-link-active"><i class="fa fa-users"></i>&nbsp;&nbsp;Customer accounts</a>
         <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
       </div>
-      <div class="content">
+      <!-- content starts -->
+      <div class="content" >
 
 
-search bar here search bar here
-        <div class="customer-list-div">
-          <p>
-            <i class="glyphicon glyphicon-user"></i>  Full Name: <span> John Doe</span><br>
-            <i class="glyphicon glyphicon-envelope"></i>  Email: <span>doe@gmail.com</span>
-            <i class="glyphicon glyphicon-phone"></i>    Mobile: <span>01932999999</span><br>
-            <i class="glyphicon glyphicon-home"></i> Shipping address: <span>19/A circus road, Dhaka</span>
-          </p>
-
+        <!-- Search form -->
+        <div style="text-align: center;border-radius: 30px;">
+          <form action="a.asp">
+            <input class="form-control" required="true" autofocus="true" style="text-align: center;width: 80%;display: inline-block;" type="text" placeholder="Search a customer account" name="searchtxt">
+            <input class="btn-src" type="submit" style="margin-left: -2px;"  value="Search">
+          </form>
         </div>
+        <br>
+        <!-- search form closes -->
+
+        <!-- list of customer starts -->
+        <ul class="list-group">
+
+          <li class="list-group-item">
+            <div class="list-id-time">
+             <p>
+              <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  
+              <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  
+              <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  
+              <i class="glyphicon glyphicon-time"></i>       <span>7:11 PM April 2, 2019 </span> <br>
+              <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span>
+            </p>           
+          </div>            
+        </li>
+
+        <li class="list-group-item">
+          <div class="list-id-time">
+           <p>
+            <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  
+            <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-time"></i>       <span>7:11 PM April 2, 2019 </span> <br>
+            <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span>
+          </p>           
+        </div>            
+      </li>
+
+            <li class="list-group-item">
+          <div class="list-id-time">
+           <p>
+            <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  
+            <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-time"></i>       <span>7:11 PM April 2, 2019 </span> <br>
+            <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span>
+          </p>           
+        </div>            
+      </li>
+      
+
+            <li class="list-group-item">
+          <div class="list-id-time">
+           <p>
+            <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  
+            <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-time"></i>       <span>7:11 PM April 2, 2019 </span> <br>
+            <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span>
+          </p>           
+        </div>            
+      </li>
+      
+
+            <li class="list-group-item">
+          <div class="list-id-time">
+           <p>
+            <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  
+            <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-time"></i>       <span>7:11 PM April 2, 2019 </span> <br>
+            <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span>
+          </p>           
+        </div>            
+      </li>
+      
+
+            <li class="list-group-item">
+          <div class="list-id-time">
+           <p>
+            <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  
+            <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  
+            <i class="glyphicon glyphicon-time"></i>       <span>7:11 PM April 2, 2019 </span> <br>
+            <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span>
+          </p>           
+        </div>            
+      </li>
+      
+    </ul>
+    <!-- list of customer ends -->
 
 
-      </div>
-      <!-- exiting main -->
-    </div>
+    <!-- exiting content -->
+  </div>
+  <!-- exiting main -->
+</div>
 
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-
-
-
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
 
 
 
-    </script>
 
-  </body>
-  </html>
+
+
+</script>
+
+</body>
+</html>
 

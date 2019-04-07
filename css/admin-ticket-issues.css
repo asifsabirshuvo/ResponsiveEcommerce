@@ -16,10 +16,12 @@
 	padding:6px 15px;
 }
 
-.ul{
-	position: relative;
-}
 
+.time-right{
+float: right;
+color: grey;
+font-size: 12px;
+}
 
 
 
@@ -30,4 +32,28 @@ li:hover{
 /*list order ID time float right*/
 .list-id-time{
 	color: grey;
+}
+.list-group-item{
+padding: 5px 40px;
+}
+
+
+/*issue pop up*/
+
+.modal-box-reply-1{
+	padding: 5px;
+	padding-bottom: 25px;
+	background-color: white;
+	background-color: #f1f1f1;
+
+}
+
+.modal-box-reply-2{
+	padding: 5px;
+	padding-bottom: 25px;
+	background-color: #f7f7f7;
+}
+
+img{
+	width: 30px;height: 30px;border-radius: 50%;display: inline-block;
 }

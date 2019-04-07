@@ -11,15 +11,16 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 	<!-- crimson font download -->
-<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-<!-- jquery for loader -->
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+	<!-- jquery for loader -->
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
 	<link rel="stylesheet" type="text/css" href="../css/allproducts.css">  
-<script>
+	<link rel="stylesheet" type="text/css" href="../css/productview.css">  
+	<script>
 	//paste this code under head tag or in a seperate js file.
 	// Wait for window load
 	$(window).load(function() {
@@ -33,18 +34,18 @@
 	<div class="se-pre-con"></div>
 	<!-- Ends -->
 
-	<div class="topnav" id="myTopnav">
+	<div class="topnav" style="z-index: 1000;" id="myTopnav">
 		<a href="index.html" >
 			<img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
 
 			<a href="allproducts.html" class="cool-link">All products</a>
 
-	   
-       <a href="cartview.html" class="cool-link" id="cart-group" 
-       style="float:right;">
-       <i class="fa fa-shopping-cart" id="cart-logo"></i>&nbsp; 
-       <span class="badge badge-overlap" id="cart-badge">1</span></a>
-       <a style="pointer-events: none; cursor: default;float: right;margin-top: 16px; border-right: 1px solid black;" href=""></a>
+
+			<a href="cartview.html" class="cool-link" id="cart-group" 
+			style="float:right;">
+			<i class="fa fa-shopping-cart" id="cart-logo"></i>&nbsp; 
+			<span class="badge badge-overlap" id="cart-badge">1</span></a>
+			<a style="pointer-events: none; cursor: default;float: right;margin-top: 16px; border-right: 1px solid black;" href=""></a>
 			<a href="login.html" class="cool-link" style="float:right;">Login <i class="fas fa-sign-in-alt"></i></a>   
 
 
@@ -70,14 +71,14 @@
 		<!-- left view init -->
 		<div class="product-view-left">
 			<img id="myimage" src="../img/macbook.jpeg" width="65%" height="65%" 
-			style="border: 4px solid #f7f7f7;text-align: center;">
+			style="border: 2px solid #f7f7f7;text-align: center;">
 		</div>
 		<!-- left view exit -->
 
 
 		<!-- right view init -->
 		<div class="product-view-right">
-			<h3><b>Hawai Shirt for man, Green and printed..100% cotton</b></h3>
+			<h3><b>Hawai Shirt for man, Green white tone. 100% cotton</b></h3>
 			<span id="macPrice" style="font-size: 20px;">980$</span>
 
 			<p>  <br><small>product ID: </small>
@@ -85,108 +86,62 @@
 
 
 				<p>Sizes available: </span><span>M,L,XL</p>
-				<p>Lorem Uipsum LoremLorem Uipsum LoremLorem Uipsum Lorem
-					Lorem Uipsum LoremLorem Uipsum LoremLorem Uipsum LoremLorem  LoremLorem Uipsum LoremLorem Uipsum LoremLorem Uipsum Lore</p>
-
-					<br>
-
-
-
-					<select name="size" style="; padding: 7px 5px;" id="size-select" required>
-						<option value="">sizes</option>
-						<option value="S">S</option>
-						<option value="M">M</option>
-						<option value="L">L</option>
-						<option value="XL">XL</option>
-					</select>
+				<p>Brand - Zebex, Model - Zebex Z-3220, Optical system - 2, 500 pixel linear sensor, Depth of field - 0mm (3 mil), 0 - 40mm (4 mil), 0 - 45mm (5 mil), 0 - 50mm (7.5 mil), 0 - 60mm (10 mil), 0 - 75mm (13 mil), 0 - 90mm (20 mil), Indicators - Two colors LED, beep, Beepers operation - Programmable tone & beep time, Interface - Keyboard, RS-232, HID USB, USB Virtual COM, wand, OPOS, JPOS, Cable - Standard 2M straight, Input voltage.
+				</p>
+				<br>
 
 
 
-					<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
-					<div style="display: inline-block;">
+				<select name="size" style="; padding: 7px 5px;" id="size-select" required>
+					<option value="">sizes</option>
+					<option value="S">S</option>
+					<option value="M">M</option>
+					<option value="L">L</option>
+					<option value="XL">XL</option>
+				</select>
+
+
+
+				<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+				<div style="display: inline-block;">
 
 					<button type="button" id="btn-minus" value="minus" style="text-align: center;padding: 5px 13px 5px 5px;margin-right: -1em;" onclick="updateQty(this.value)">
-							<i class="fa fa-minus" aria-hidden="true"></i>
-						</button>
+						<i class="fa fa-minus" aria-hidden="true"></i>
+					</button>
 
-						<input class="input-group-field" id="input-qty" style="text-align: center ;margin: 0; padding: 5px 10px 5px 5px; width: 44px;" type="number" name="quantity" value="0">
-
-
-						<button type="button" id="btn-plus" value="plus" style="text-align: center;padding: 5px 5px;margin-left: -1em;" onclick="updateQty(this.value)">
-							<i class="fa fa-plus" aria-hidden="true"></i>
-						</button>
-					</div>
-
-					<br><br>
-					<button type="button" style="margin-top: 5px;padding: 5px" id="fac"  value="fac" onclick="buynow(this)">
-						Add to cart	<i class="fas fa-cart-plus"> </i>
-					</button>  
+					<input class="input-group-field" id="input-qty" style="text-align: center ;margin: 0; padding: 5px 10px 5px 5px; width: 44px;" type="number" name="quantity" value="0">
 
 
+					<button type="button" id="btn-plus" value="plus" style="text-align: center;padding: 5px 5px;margin-left: -1em;" onclick="updateQty(this.value)">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</button>
 				</div>
-				<!-- exit right div -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!-- exiting main -->
+				<br><br>
+				<button type="button" style="margin-top: 5px;padding: 5px" id="fac"  value="fac" onclick="buynow(this)">
+					Add to cart	<i class="fas fa-cart-plus"> </i>
+				</button>  
 			</div>
+			<!-- exit right div -->
+			<!-- exiting main -->
+		</div>
 
+		<script>
 
-
-
-
-
-
-
-
-
-
-
-			<script>
-			
-				function myFunction() {
-					var x = document.getElementById("myTopnav");
-					if (x.className === "topnav") {
-						x.className += " responsive";
-					} else {
-						x.className = "topnav";
-					}
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
 				}
+			}
 
 
 
+			function animatefunc() {
 
-				function animatefunc() {
-
-					var x =   document.getElementById('cart-group');
+				var x =   document.getElementById('cart-group');
 	   //hamburger menu icon group
 	   var x1 = document.getElementById("bar-group");
 	    //shaking the cart logo
@@ -215,20 +170,21 @@
 
 
 	    function updateQty(val){
-			var qty = document.getElementById("input-qty");
+	    	var qty = document.getElementById("input-qty");
 
-			if(val=='plus')
-				qty.value = parseInt(qty.value)+1;
-			else
-				if(parseInt(qty.value)!=0)
-				qty.value = parseInt(qty.value)-1;
-			
+	    	if(val=='plus')
+	    		qty.value = parseInt(qty.value)+1;
+	    	else
+	    		if(parseInt(qty.value)!=0)
+	    			qty.value = parseInt(qty.value)-1;
 
-		}
 
-	</script>
+	    	}
 
-</body>
-</html>
+ 	
+	    </script>
+
+	</body>
+	</html>
 
 

@@ -1,8 +1,9 @@
 
+
 .btn-src{
-	background-color: #f1f1f1;
-	border:2px solid #f1f1f1;
-	padding:6px 15px;
+	background-color: #f7f7f7;
+	border:1px solid grey;
+	padding:5px 15px 7px 15px;
 	border-radius: 5px;
 }
 .btn-src:hover{
@@ -14,20 +15,4 @@
 	border:1px solid grey;
 	color: white;
 	padding:6px 15px;
-}
-
-.ul{
-	position: relative;
-}
-
-
-
-
-
-li:hover{
-	background-color: #f7f7f7;
-}
-/*list order ID time float right*/
-.list-id-time{
-	color: grey;
 }

@@ -1,19 +1,4 @@
-.btn-delete{
-	background:red; 
-	color: white;border-radius: 5px; 
-	border: 5px solid red;
-	float: right;
-	margin-top: -36px;
-	position: relative;
-	margin-right: 4px;
-}
-.display-img{
-	width:100%;
-	height: 100px;
-}
 
-
-/*upload btn*/
 .btn-src{
 	background-color: #f1f1f1;
 	border:2px solid #f1f1f1;
@@ -31,3 +16,30 @@
 	padding:6px 15px;
 }
 
+li:hover{
+	background-color: #f7f7f7;
+}
+
+
+
+/*order table*/
+table{
+	color: grey;
+}
+.list-group{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.list-group-item{
+padding: 5px;
+}
+
+
+/*featured ribbom*/
+.ribbon{
+	padding: 2px 5px;
+	color: white;
+	background-color: #d9534f;
+	position: absolute;
+}
