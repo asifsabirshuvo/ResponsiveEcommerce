@@ -50,6 +50,7 @@ $(window).load(function() {
 
     <div class="main">
       <div class="sidebar">
+        <a href="admin-dashboard.html" class="cool-link"><i class="fa fa-dashboard"></i>&nbsp;&nbsp;Dashboard</a>
         <a href="admin-all-products.html" class="cool-link cool-link-active"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
 
         <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
@@ -91,10 +92,6 @@ $(window).load(function() {
              <span style="font-size: 17px;">Mens suit 100% leather with metal patch   
              </span><br>
              <span > ID: 60943698234</span>
-             <!-- Featured -->
-             <div class="ribbon">
-              <i class="fas fa-fire"> Featured</i>
-            </div>           
 
             <div style="margin-top: 20px;">
               <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" 
@@ -162,7 +159,7 @@ $(window).load(function() {
           <div class="modal-content">
             <!-- Modal body -->
             <div class="modal-body" style="color: grey;">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <button type="button" class="close" style="font-size: 30px;" data-dismiss="modal">&times;</button>
               <br>
               <div style="text-align: center;"> 
                <img src="../img/macbook.jpeg" style="height: 200px;width: 200px padding:2px;">
@@ -250,12 +247,12 @@ $(window).load(function() {
           <!--  -->
 
           <div style="text-align: center;">
-           <button type="button" class="btn btn-src" data-dismiss="modal">
+           <button type="button" class="btn" data-dismiss="modal">
              Cancel                    
              <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
            </button>
 
-           <button class="btn btn-src" type="submit">
+           <button class="btn btn-danger" type="submit">
              Save
              <i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i>
            </button>
@@ -284,12 +281,12 @@ $(window).load(function() {
 
       <!-- Modal footer -->
       <div class="modal-footer" style="text-align: center;">   
-        <button type="button" class="btn-src" data-dismiss="modal">
+        <button type="button" class="btn" data-dismiss="modal">
           Cancel                    
           <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
         </button>
 
-        <button class="btn-src" type="submit" id="submit-original">
+        <button class="btn btn-danger" type="submit" id="submit-original">
           Delete
           <i class="fa fa-trash" aria-hidden="true"></i>
         </button> 

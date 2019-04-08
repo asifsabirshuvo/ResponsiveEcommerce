@@ -34,3 +34,15 @@ table{
 .list-group-item{
 padding: 5px;
 }
+
+/*featured ribbon*/
+.ribbon{
+	float: right;
+	padding: 0px 35px 0px 5px;
+	background-image: linear-gradient(to right, grey, white); /* Standard syntax (must be last) */
+	background-color: grey; /* browser not supporting gradients*/
+	position: absolute;
+	color: white;
+	font-size: 12px;
+	margin-top: 3px;
+}
