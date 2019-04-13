@@ -18,7 +18,10 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-    
+    <!-- GOOGLE GRAPH API SVG -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ 
+
     <link rel="stylesheet" type="text/css" href="../css/header-admin.css">
     <link rel="stylesheet" type="text/css" href="../css/admin-dashboard.css">
 
@@ -64,7 +67,7 @@
       <a href="admin-customer-accounts.html" class="cool-link"><i class="fa fa-users"></i>&nbsp;&nbsp;Customer accounts</a>
       <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
 </div>
-<!-- content for admins menu-->
+<!-- content for admin menu-->
 <div class="content">
 
 <!-- dashboard title and dropdown -->
@@ -83,6 +86,8 @@
         <option>Today</option>
         <option>Yesterday</option>
         <option>Last week</option>
+        <option>This month</option>
+        <option>Last month</option>
         <option>All time</option>
       </select>
       </div>
@@ -99,8 +104,9 @@
   <div class="dashboard-child">
   <span style="float: left;">Orders</span> <br>
   <div>
-      <i class="fa fa-shopping-cart" style="font-size:24px; float: left;padding-top: 5px;"></i>
-      <span style="float: right;font-size: 50px;padding-right: 14px;display: inline-block;"> 12 </span>
+      <i class="fa fa-shopping-cart" class="dashboard-child-icon" style="font-size:24px; float: left;padding-top: 5px;"></i>
+      <span style="float: right;font-size: 50px;padding-right: 14px;padding-top: 15px; display: inline-block;"> 
+      12 </span>
   </div>
 </div>
 
@@ -109,7 +115,8 @@
   <span style="float: left;">Earned</span> <br>
   <div>
       <i class="fa fa-dollar" style="font-size:24px; float: left;padding-top: 5px;"></i>
-      <span style="float: right;font-size: 50px;padding-right: 14px;display: inline-block;"> 789 </span>
+      <span style="float: right;font-size: 50px;padding-right: 14px;padding-top: 15px; display: inline-block;"> 
+      789 </span>
   </div>
 </div>
 
@@ -119,7 +126,8 @@
   <span style="float: left;">New products</span> <br>
   <div>
       <i class="fa fa-plus" style="font-size:24px; float: left;padding-top: 5px;"></i>
-      <span style="float: right;font-size: 50px;padding-right: 14px;display: inline-block;"> 3 </span>
+      <span style="float: right;font-size: 50px;padding-right: 14px;padding-top: 15px; display: inline-block;"> 
+      5 </span>
   </div>
 </div>
 
@@ -129,20 +137,25 @@
   <span style="float: left;">Issues</span> <br>
   <div>
       <i class="fa fa-exclamation" style="font-size:24px; float: left;padding-top: 5px;"></i>
-      <span style="float: right;font-size: 50px;padding-right: 14px;display: inline-block;"> 3 </span>
+      <span style="float: right;font-size: 50px;padding-right: 14px;padding-top: 15px; display: inline-block;"> 
+      2 </span>
   </div>
 </div>
 
-
-
-
-
 <!-- 4 division div parent ends -->
 </div>
-
-
-
-
+<br>
+<!-- starts graph view -->
+<div style="margin: 0% 1%;">
+<div id="linechart_material_orders" ></div>
+<br> 
+<div id="linechart_material_earned" ></div>
+<br> 
+<div id="linechart_material_new_products" ></div>
+<br>    
+<div id="linechart_material_issues" ></div>
+<br> 
+</div>
 
 
 
@@ -163,6 +176,158 @@
     }
   }
 
+// -- working on graph api JS file
+
+
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+// graph view for orders
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Orders');
+
+      data.addRows([
+        [1,  7.8],
+        [2,  3.],
+        [3,  2.],
+        [4,  1],
+        [5,  1],
+        [6,   1],
+        [7,   4],
+        [8,  0],
+        [9,  0],
+        [10, 1],
+        [11, 5],
+        [12,  6],
+        [13,  4],
+        [14,  2]
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Order chart',
+        },
+        width: '100%',
+        height: 300,
+        colors: ['blue']
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material_orders'));
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    
+
+// graph view for earned
+      var data1 = new google.visualization.DataTable();
+      data1.addColumn('number', 'Day');
+      data1.addColumn('number', 'Earned');
+
+      data1.addRows([
+        [1,  1781],
+        [2,  345],
+        [3,  223],
+        [4,  1425],
+        [5,  123],
+        [6,   231],
+        [7,   432],
+        [8,  110],
+        [9,  220],
+        [10, 321],
+        [11, 435],
+        [12,  1126],
+        [13,  5634],
+        [14,  1332]
+      ]);
+
+      var options1 = {
+        chart: {
+          title: 'Earned chart',
+        },
+        width: '100%',
+        height: 300,
+        colors: ['green']
+
+      };
+
+      var chart1 = new google.charts.Line(document.getElementById('linechart_material_earned'));
+      chart1.draw(data1, google.charts.Line.convertOptions(options1));
+    
+
+
+// graph view for new products
+      var data2 = new google.visualization.DataTable();
+      data2.addColumn('number', 'Day');
+      data2.addColumn('number', 'New products');
+
+      data2.addRows([
+        [1,  7],
+        [2,  3],
+        [3,  2],
+        [4,  0],
+        [5,  1],
+        [6,   1],
+        [7,   4],
+        [8,  0],
+        [9,  0],
+        [10, 1],
+        [11, 5],
+        [12,  6],
+        [13,  4],
+        [14,  2]
+      ]);
+
+      var options2 = {
+        chart: {
+          title: 'New products chart',
+        },
+        width: '100%',
+        height: 300,
+        colors: ['orange']
+
+      };
+
+      var chart2 = new google.charts.Line(document.getElementById('linechart_material_new_products'));
+      chart2.draw(data2, google.charts.Line.convertOptions(options2));
+    
+
+
+// graph view for issues
+      var data3 = new google.visualization.DataTable();
+      data3.addColumn('number', 'Day');
+      data3.addColumn('number', 'Issues');
+
+      data3.addRows([
+        [1,  8],
+        [2,  3],
+        [3,  2],
+        [4,  7],
+        [5,  1],
+        [6,   1],
+        [7,   4],
+        [8,  0],
+        [9,  0],
+        [10, 1],
+        [11, 2],
+        [12,  3],
+        [13,  4],
+        [14,  1]
+      ]);
+
+      var options3 = {
+        chart: {
+          title: 'Issues chart',
+        },
+        width: '100%',
+        height: 300,
+        colors: ['red']
+
+      };
+
+      var chart3 = new google.charts.Line(document.getElementById('linechart_material_issues'));
+      chart3.draw(data3, google.charts.Line.convertOptions(options3));
+    }
 
 
   </script>
