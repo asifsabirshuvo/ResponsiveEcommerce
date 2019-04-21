@@ -1,34 +1,46 @@
 .product-slider-child{
 	width:25%;
 	max-height: 180px;
-	float: left;a
+	float: left;
+	padding-right: 1px;
+	padding-left: 1px;
 }
 
 .product-slider-child:hover{
 	opacity: 0.7;
 }
 
-.product-slider-child:hover img{
-
+/*left right button*/
+.carousel-control:hover {
+	color: red;
 }
+
 
 #featured-div{
-
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 35px;
 }
 #top-div{
-	padding-top: 30px;
-}
+		padding: 40px 10px 0px 10px;
 
+}
 
 
 /*responsive mobile*/
 
 @media screen and (max-width: 600px) {
 
-	#top-div{
-		padding-top: 0px;
-	}
-	
+
+#featured-div{
+	padding: 10px 0px;
+}
+#top-div{
+		padding: 10px 0px;
+
+}
+
 }
 
 
