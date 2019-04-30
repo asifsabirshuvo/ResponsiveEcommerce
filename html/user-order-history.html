@@ -1,0 +1,257 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My order history</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- fa fa icons -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<!-- crimson font download -->
+		<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+		<!-- jquery for loader -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../css/header.css">
+		<link rel="stylesheet" type="text/css" href="../css/user-order-history.css">  
+		<script>
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+	</script>
+
+
+	</head>
+	<body>
+	<!-- Pre page loader -->
+	<div class="se-pre-con"></div>
+	<!-- Ends -->
+
+	<div class="topnav" style="z-index: 1000;" id="myTopnav">
+		<a href="index.html" >
+			<img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
+
+			<a href="#" class="cool-link cool-link-active"><i class="fas fa-history"></i>&nbsp;&nbsp;My order history</a>
+			<a href="#" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Support tickets</a>
+			<a href="#" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
+
+			<a href="cartview.html" class="cool-link" id="cart-group" 
+			style="float:right;">
+			<i class="fa fa-shopping-cart" id="cart-logo"></i>&nbsp; 
+			<span class="badge badge-overlap" id="cart-badge">1</span></a>
+			<a style="pointer-events: none; cursor: default;float: right;margin-top: 16px; border-right: 1px solid black;" href=""></a>
+			<a href="login.html" class="cool-link" style="float:right;">Login 
+				<i class="fas fa-sign-in-alt"></i></a>   
+
+
+
+
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars" id="bar-group" style="margin-top: 8px"> 
+						<span class="badge badge-overlap" id="cart-badge">1</span>
+					</i> 
+				</a>
+
+			</a>
+			<form id="demo-2"  style="float: right;margin-top: 6px;" class="search-form">
+				<input type="search" placeholder=" Search">
+			</form>
+
+		</div>
+		<div class="main">
+	<!-- main div starts -->
+<br>
+
+	    <!-- list group -->
+	    <div style="margin: auto;width: 90%;">
+
+	      <ul class="list-group" style="display: block; text-align: center;">
+	        <li class="list-group-item"  data-toggle="modal" data-target="#myModal">
+	          <div class="list-id-time">
+	           <i class="fas fa-cart-arrow-down"></i> Order ID: 75964280002
+	           &nbsp;&nbsp;
+	           <span class="label label-warning" style="font-size: 14px;">&nbsp;&nbsp;Waiting&nbsp;</span>
+	         </div>            
+	       </li>
+
+	</ul>
+	<!-- list grp div closes -->
+	</div>
+
+
+
+
+	<!-- modal for the pop up -->
+	<!-- The Modal -->
+	<div class="modal" id="myModal">
+	<div class="modal-dialog">
+	<div class="modal-content">
+
+	  <!-- Modal Header -->
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal">&times;</button>
+	    <!-- order ID, date log -->
+	    <div class="modal-order-tag">
+	      <span style="font-size: 20px;">OrderID: 75964280002</span>          
+	      <br>
+	      <i class="glyphicon glyphicon-time" style="font-size: 12px;">       
+	        <span>7:11 PM April 2, 2019 </span></i> 
+	        <span class="label label-success" style="font-size: 10px;">&nbsp;Shipped&nbsp;</span>
+	        <br>
+	      </div>
+
+	      <!--  user info-->
+	      <div class="modal-user-tag">
+	       <i class="glyphicon glyphicon-user"></i>       <span> John Doe</span> &nbsp;  &nbsp;  <br>
+	       <i class="glyphicon glyphicon-phone"></i>      <span>01932999999</span>  &nbsp; &nbsp;  <br>
+	       <i class="glyphicon glyphicon-envelope"></i>   <span>Doegenius@gmail.com</span> &nbsp;  &nbsp;  <br>
+	       <i class="glyphicon glyphicon-home"></i>       <span>House#22, 19/A lake circus road, Dhaka, Bangladesh</span><br>
+	     </div>
+	     <!-- modal header closes -->
+	   </div> 
+
+	   <!-- Modal body -->
+	   <div class="modal-body">
+
+	    <table class="table table-striped">
+	      <thead>
+	        <tr>
+	          <th>Product</th>
+	          <th>Price</th>
+	          <th>Quantity</th>
+	          <th>Amount</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td>Luxury suit</td>
+	          <td>200&nbsp;$</td>
+	          <td>3</td>
+	          <td>600&nbsp;$</td>
+	        </tr>
+	        <tr>
+	          <td>Luxury suit</td>
+	          <td>200&nbsp;$</td>
+	          <td> 3</td>
+	          <td>600&nbsp;$</td>
+	        </tr>
+	        <tr>
+	          <td>Luxury suit</td>
+	          <td>200&nbsp;$</td>
+	          <td> 3</td>
+	          <td>600&nbsp;$</td>
+	        </tr>
+	        <tr>
+	          <td>Luxury suit</td>
+	          <td>200&nbsp;$</td>
+	          <td> 3</td>
+	          <td>600&nbsp;$</td>
+	        </tr>         
+	      </tbody>
+	    </table>
+	    <span style="float: right;margin-right: 85px;background-color: #f1f1f1;padding: 3px;color: grey;">Net: <span>12000</span>&nbsp;$</span>              
+
+
+
+	    <!-- modal body ends -->
+	  </div>
+
+	  <!-- Modal footer -->
+	  <div class="modal-footer" style="margin-top: 20px;">
+	  <div style="text-align: center;">
+	  <button class="btn-src" id="btn-create-issue" onclick="enableIssueForm()">Create issue</button>	
+	  </div>
+	   
+
+<!-- create issue form -->
+			 <form class="form-inline" action="/ac.php" style="display: none;text-align: center;" id="user-issue-form">
+                <div class="form-group">
+                  <textarea type="text" autofocus="true" class="form-control" id="msg" rows="2" cols="55" placeholder="Enter your complaint message" name="msg"></textarea>
+                </div>
+                <button type="submit" class="btn-src" style="border-radius: 5px;">Create</button>
+                <small style="text-align: center;">This issue can be found in support tickets.</small>
+              </form>
+
+
+
+
+	  </div>
+
+	</div>
+	</div>
+	</div>
+	<!-- modal has ended -->
+
+	
+
+
+
+
+
+	<!-- exiting main -->
+		</div>
+
+
+
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+
+			}
+
+			function enableIssueForm(){	
+				document.getElementById('btn-create-issue').style.display= 'none';
+				document.getElementById('user-issue-form').style.display= 'block';
+			}
+
+
+
+
+			function animatefunc(item) {
+
+				var x =   document.getElementById('cart-group');
+	   //hamburger menu icon group
+	   var x1 = document.getElementById("bar-group");
+	    //shaking the cart logo
+	    x.className = "cool-link vibrate";
+	    //hamburger menu to shake on button click
+	    x1.className += " vibrate";
+	    setTimeout(function(){ 
+	      //reseting  cart logo shake
+	      x.className = "cool-link";
+	       //reseting hamburger menu shake
+	       x1.className = "fa fa-bars";
+	   }, 500);
+	}
+
+
+	function buynow(item){
+	    	//animate func
+	    	animatefunc(item);
+
+	    	//changing button text
+	    	var buttonId = item.id;
+	    	document.getElementById(buttonId).innerHTML = 'added to cart <i class="fas fa-check fa-fa-red">'
+	    	document.getElementById(buttonId).disabled = true;
+	    	//updating cookies
+	    }
+
+
+
+	</script>
+
+	</body>
+	</html>
+
