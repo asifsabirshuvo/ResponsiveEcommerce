@@ -18,28 +18,19 @@
 		
 		<link rel="stylesheet" type="text/css" href="../css/header.css">
 		<link rel="stylesheet" type="text/css" href="../css/user-order-history.css">  
-		<script>
-	//paste this code under head tag or in a seperate js file.
-	// Wait for window load
-	$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");;
-	});
-	</script>
+	
 
 
 	</head>
 	<body>
-	<!-- Pre page loader -->
-	<div class="se-pre-con"></div>
-	<!-- Ends -->
+
 
 	<div class="topnav" style="z-index: 1000;" id="myTopnav">
 		<a href="index.html" >
 			<img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
 
 			<a href="#" class="cool-link cool-link-active"><i class="fas fa-history"></i>&nbsp;&nbsp;My order history</a>
-			<a href="#" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Support tickets</a>
+			<a href="#" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;My support tickets</a>
 			<a href="#" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
 
 			<a href="cartview.html" class="cool-link" id="cart-group" 
@@ -176,6 +167,7 @@
                   <textarea type="text" autofocus="true" class="form-control" id="msg" rows="2" cols="55" placeholder="Enter your complaint message" name="msg"></textarea>
                 </div>
                 <button type="submit" class="btn-src" style="border-radius: 5px;">Create</button>
+                <br>
                 <small style="text-align: center;">This issue can be found in support tickets.</small>
               </form>
 
