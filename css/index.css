@@ -1,31 +1,72 @@
-.product-slider-child{
-	width:25%;
-	max-height: 180px;
-	float: left;
-	padding-right: 1px;
-	padding-left: 1px;
+/*working with featured slider*/
+
+.slider-left-arrow{
+	color: grey; 
+	text-decoration: none; 
+	margin-right: 20px;
+	font-size: 25px;
 }
 
-.product-slider-child:hover{
+.slider-right-arrow{
+	color: grey;
+	text-decoration: none; 
+	margin-right: 30px;
+	font-size: 25px;	
+}
+
+.slider-left-arrow:hover{
+	color:red;
+	text-decoration: none;
+}
+
+.slider-right-arrow:hover{
+	color:red;
+	text-decoration: none;
+}
+
+
+.slider-title{
+	border-left: 4px solid red;
+	padding: 4px;
+	font-size: 20px;
+}
+
+.flex-container {
+	display: flex;
+	overflow:hidden;
+	flex-wrap: nowrap;
+	background-color: #f7f7f7;
+}
+
+.flex-container > div {
+	background-color: #f1f1f1;
+	min-width: 200px;
+	min-height:200px;
+	margin: 5px;
+	text-align: center;
+}
+
+
+
+/*image stuff*/
+.item-container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.item-container:hover {
 	opacity: 0.7;
 }
 
-/*left right button*/
-.carousel-control:hover {
-	color: red;
+
+.item-bottom-right {
+	position: absolute;
+	bottom: 8px;
+	font-size: 22px;
+	right: 16px;
 }
 
-
-#featured-div{
-	padding-top: 5px;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-bottom: 35px;
-}
-#top-div{
-		padding: 40px 10px 0px 10px;
-
-}
 
 
 /*responsive mobile*/
@@ -33,13 +74,13 @@
 @media screen and (max-width: 600px) {
 
 
-#featured-div{
-	padding: 10px 0px;
-}
-#top-div{
+	#featured-div{
+		padding: 10px 0px;
+	}
+	#top-div{
 		padding: 10px 0px;
 
-}
+	}
 
 }
 
