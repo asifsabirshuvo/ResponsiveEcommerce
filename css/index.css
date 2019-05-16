@@ -28,6 +28,7 @@
 .slider-title{
 	border-left: 4px solid red;
 	padding: 4px;
+	margin:10px;
 	font-size: 20px;
 }
 
@@ -35,6 +36,7 @@
 	display: flex;
 	overflow:hidden;
 	flex-wrap: nowrap;
+	margin: 0px 10px;
 	background-color: #f7f7f7;
 }
 
