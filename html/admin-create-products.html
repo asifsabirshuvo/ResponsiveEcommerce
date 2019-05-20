@@ -28,56 +28,67 @@
   </head>
   <body>
 
-  <div class="topnav" style="z-index: 1000;" id="myTopnav">
-    <a href="index.html" >
-      <img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
+    <div class="topnav" style="z-index: 1000;" id="myTopnav">
+      <a href="index.html" >
+        <img class="img-rotate" src="../img/logo.png" style="height:35px;width:35px;"></a>
 
-      <a href="login.html" class="cool-link" style="float:right;">Logout&nbsp;
-        <i class="fa fa-sign-out" aria-hidden="true"></i>
-      </a>   
+        <a href="login.html" class="cool-link" style="float:right;">Logout&nbsp;
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>   
 
-    </div>
-
-    <div class="main">
-      <div class="sidebar">
-              <a href="admin-dashboard.html" class="cool-link"><i class="fa fa-dashboard"></i>&nbsp;&nbsp;Dashboard</a>
-
-        <a href="admin-all-products.html" class="cool-link"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
-        
-        <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
-        <a href="admin-create-products.html" class="cool-link cool-link-active"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
-      
-        <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
-        <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
-
-        <a href="admin-order-history.html" class="cool-link"><i class="fas fa-history"></i>&nbsp;&nbsp;Order history</a>
-        <a href="admin-ticket-issues.html" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Ticket Issues</a>
-        <a href="admin-customer-accounts.html" class="cool-link"><i class="fa fa-users"></i>&nbsp;&nbsp;Customer accounts</a>
-        <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
       </div>
-      <!-- content starts -->
-      <div class="content">
 
-        <!-- Sign up div-->
-        <div  class="create-product-div" > 
-          <h3>Product upload</h3>
+      <div class="main">
+        <div class="sidebar">
+          <a href="admin-dashboard.html" class="cool-link"><i class="fa fa-dashboard"></i>&nbsp;&nbsp;Dashboard</a>
 
-          <form>
-            <div class="input-group">
-              <span class="input-group-addon" style="min-width: 105px;">Title</span>
-              <input id="title" type="text" class="form-control" name="title" placeholder="Product title" required="true">
+          <a href="admin-all-products.html" class="cool-link"><i class="fas fa-list-ul">&nbsp;&nbsp;&nbsp;</i>All products</a>
+
+          <a href="admin-featured-products.html" class="cool-link"><i class="far fa-star"></i>&nbsp;&nbsp;Featured products</a>
+          <a href="admin-create-category.html" class="cool-link"><i class="fas fa-plus">&nbsp;&nbsp;</i> Create category</a>
+
+          <a href="admin-create-products.html" class="cool-link cool-link-active"><i class="fas fa-plus-square">&nbsp;&nbsp;</i> Create products</a>
+
+          <a href="admin-create-discounts.html" class="cool-link"><i class="fas fa-tag"></i>&nbsp;&nbsp;Create Discounts</a>
+          <a href="admin-notice-banner.html" class="cool-link"><i class="far fa-flag"></i>&nbsp;&nbsp;Notice Banner</a>
+
+          <a href="admin-order-history.html" class="cool-link"><i class="fas fa-history"></i>&nbsp;&nbsp;Order history</a>
+          <a href="admin-ticket-issues.html" class="cool-link"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Ticket Issues</a>
+          <a href="admin-customer-accounts.html" class="cool-link"><i class="fa fa-users"></i>&nbsp;&nbsp;Customer accounts</a>
+          <a href="admin-settings.html" class="cool-link"><i class="fas fa-cog"></i>&nbsp;&nbsp;Settings</a>
+        </div>
+        <!-- content starts -->
+        <div class="content">
+
+          <!-- Sign up div-->
+          <div  class="create-product-div" > 
+            <h3>Product upload</h3>
+
+            <form>
+              <div class="input-group">
+                <span class="input-group-addon" style="min-width: 105px;">Title</span>
+                <input id="title" type="text" class="form-control" name="title" placeholder="Product title" required="true">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" style="min-width: 105px;">Price</span>
+                <input id="price" type="number" class="form-control" name="price" placeholder="Product price" required="true">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" style="min-width: 105px;">Description</span>
+                <textarea class="form-control" id="description" name="description" rows="5" placeholder="Product Description" required="true"></textarea>
+              </div>
+              <div class="input-group">
+               <span class="input-group-addon" style="min-width: 105px;">Category</span>
+               <select class="form-control" id="sel1" required="true">
+                <option>Mens outfits</option>
+                <option>Women outfits</option>
+                <option>Electronics</option>
+              </select>
             </div>
-            <div class="input-group">
-              <span class="input-group-addon" style="min-width: 105px;">Price</span>
-              <input id="price" type="number" class="form-control" name="price" placeholder="Product price" required="true">
-            </div>
-            <div class="input-group">
-              <span class="input-group-addon" style="min-width: 105px;">Description</span>
-              <textarea class="form-control" id="description" name="description" rows="5" placeholder="Product Description" required="true"></textarea>
-            </div>
+
             <div class="input-group">
               <span class="input-group-addon" style="min-width: 105px;">Image</span>
-              <input type="file" class="form-control" id="banner-file" placeholder="upload a image file" name="banner-img">
+              <input type="file" class="form-control" id="banner-file" placeholder="upload a image file" name="banner-img" required="true">
             </div>
             <div class="input-group" style="text-align: left;font-size: 15px;border-right:1px solid #cccccc;border-bottom:1px solid #cccccc;border-radius: 5px;">
               <span class="input-group-addon" style="min-width: 106px;border-right: 1px solid #cccccc;">Sizes</span>
@@ -114,16 +125,16 @@
                   <!-- Modal footer -->
                   <div class="modal-footer" style="text-align: center;">   
                     <button type="button" class="btn" data-dismiss="modal">
-                    Cancel                    
-                    <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+                      Cancel                    
+                      <i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
                     </button>
 
                     <button class="btn btn-danger" type="submit" id="submit-original">
-                    Confirm
-                    <i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i>
+                      Confirm
+                      <i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i>
                     </button> 
 
-                   
+
                   </div>
 
                 </div>

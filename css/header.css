@@ -13,6 +13,28 @@
 				padding-top: 60px; 
 			}
 
+
+
+			/*coloring btn red*/
+			.btn-src{
+				background-color: #f1f1f1;
+				border:2px solid #f1f1f1;
+				padding:6px 15px;
+				border-radius: 5px;
+			}
+
+			.btn-src:hover{
+				border-color:red;
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+			}
+
+			.btn-src:active{
+				background-color: red;
+				border:1px solid grey;
+				color: white;
+				padding:6px 15px;
+			}
+
 			.cool-link {
 				display: inline-block;
 				color: #3F3F3F;
@@ -153,10 +175,10 @@
 	.topnav{
 		border-bottom: 0px solid white;
 
-		}
-		.footer-child{
-			display: block;
-		}
+	}
+	.footer-child{
+		display: block;
+	}
 	
 
 }
@@ -280,6 +302,6 @@ input::-webkit-input-placeholder {
 /*text box blue shadow removal*/
 
 .form-control:focus {
-  border-color:red;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+	border-color:red;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }
